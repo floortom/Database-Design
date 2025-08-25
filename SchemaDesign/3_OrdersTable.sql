@@ -3,6 +3,12 @@
 -- Select the database to use
 USE ecommerce_db;
 
+/*
+Orders table - 3NF applied
+1. It's already in the 2NF (All the information depends on the primary key, "OrderID")
+2. There are no extra dependencies between the other columns
+		("TotalAmount" depends only on "OrderID" and nothing else)
+*/
 -- Create the Orders table to store transaction details
 CREATE TABLE Orders (
 	OrderID INT AUTO_INCREMENT PRIMARY KEY, -- Unique ID for each order

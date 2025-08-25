@@ -3,6 +3,12 @@
 -- Select the database to use
 USE ecommerce_db;
 
+/*
+Reviews table - 3NF applied
+1. It's already in the 2NF (All the information depends on the primary key, "ReviewID")
+2. There are no extra dependencies between the other columns
+*/
+
 -- Create the Reviews table to store customer feedback
 CREATE TABLE Reviews (
 	ReviewID INT AUTO_INCREMENT PRIMARY KEY, -- Unique ID for each review

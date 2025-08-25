@@ -3,6 +3,13 @@
 -- Select the database to use
 USE ecommerce_db;
 
+/*
+Users table - 2NF applied
+1. Already in 1NF (each column has only one piece of information)
+2. Every piece of information in the table (like "UserName" and "Email") depends directly on the primary key
+		If you know the UserID, you can find the UserName, Email etc. and none of these depends on anything else.
+*/
+
 -- Create the Users table
 CREATE TABLE Users (
 	UserID INT PRIMARY KEY AUTO_INCREMENT, -- Unique ID for each user

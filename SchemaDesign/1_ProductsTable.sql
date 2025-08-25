@@ -3,6 +3,13 @@
 -- Select the database to use 
 USE ecommerce_db;
 
+/*
+Products table - 1NF applied
+1. Each column stores just one piece of information
+		(the "ProductName" column only contains the name of the product)
+2. There are no lists or multiple values in any column
+		(the "Price" column ony contains one price per product, not a list of prices)
+*/
 -- Create the Products table
 CREATE TABLE Products (
 	ProductID INT PRIMARY KEY AUTO_INCREMENT, -- Unique ID for each product
